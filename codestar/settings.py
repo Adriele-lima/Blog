@@ -30,7 +30,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["code-blog-proj-dfd5f0e4036c.herokuapp.com", "8000-adrielelima-blog-cs2bv1dwc95.ws-eu102.gitpod.io"]
+ALLOWED_HOSTS = [
+    "code-blog-proj-dfd5f0e4036c.herokuapp.com",
+    "8000-adrielelima-blog-cs2bv1dwc95.ws-eu102.gitpod.io"
+    ]
 
 
 # Application definition
@@ -49,8 +52,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'blog',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 SITE_ID = 1
 
@@ -94,12 +100,12 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 
 DATABASES = {
